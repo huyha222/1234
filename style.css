@@ -69,7 +69,7 @@ body{
     transition: all 1s ease-in-out;
     padding: 20x 10px;
     box-shadow: 0 0 10px var(--shadow-color);
-    margin-bottom: 50px;
+    z-index: 1;
 }
 
 .letter > .text{
@@ -80,16 +80,16 @@ body{
 }
 
 .heart{
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left:50%;
     width: 15px;
     height: 15px;
-    background: var(--heart-color);
+    background: var(--heart-color); */
     z-index: 4 ;
     transform: translate(-50%, -20%) rotate(45deg);
     transition: transform 0.5s ease-in-out 1s;
-    box-shadow: 0 0 10px var(--shadow-color);
+    box-shadow: 0 0 1px var(--shadow-color);
     cursor: pointer;
 }
 
@@ -104,11 +104,11 @@ body{
 }
 
 .heart:before {
-  top: -7.5px;
+  display: none;
 }
 
 .heart:after {
-  right: 7.5px;
+  display:  none;
 }
 
 .flap > .envelope:before {
@@ -124,7 +124,8 @@ body{
   z-index: 5; /* Add this line */
 }
 
-.flap > .envelope > .heart {
+.flap >.pointer{
   display: none;
 }
+
 
